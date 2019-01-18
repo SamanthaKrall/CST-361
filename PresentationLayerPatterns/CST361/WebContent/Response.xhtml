@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+	<head>
+		<title>
+			<ui:insert name="pageTitle">Weather</ui:insert>
+		</title>
+			<style>
+				.weather-table{
+					border:1px black solid;
+				}
+				.weather-table-odd{ 
+					background: #EEE;
+				}
+				.weather-table-header{
+					font-weight:bold;
+				}
+				.weather-table-rows{
+					border:1px black solid;
+				}
+			</style>
+	</head>
+	
+	
+	<body>
+	<p>Hello #{user.userID}</p>
+	<p>Your weather for #{user.location} :</p>
+	<br></br>
+	
+	<h:dataTable value="#{formController.service.forecast}" var="o" styleClass="weather-table" headerClass="weather-table-header" rowClasses="weather-table-odd, weather-table-even">
+		<h:column>
+			<f:facet name="header">Day of the week</f:facet>
+			#{o.day}			
+		</h:column>
+		<h:column>
+			<f:facet name="header">High</f:facet>
+			#{o.high}			
+		</h:column>
+		<h:column>
+			<f:facet name="header">Low</f:facet>
+			#{o.low}			
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Forecast</f:facet>
+			#{o.outlook}			
+		</h:column>	
+	</h:dataTable>
+	
+	
+	</body>
+</html>
