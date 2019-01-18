@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+<body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="content">
+	<h:form>
+		Album: <h:inputText value="#{song.album}" />
+		<br />
+		Artist: <h:inputText value="#{song.artist}" />
+		<br />
+		Song: <h:inputText value="#{song.song1}" />
+		<br />
+		Song: <h:inputText value="#{song.song2}" />
+		<br />
+		Song: <h:inputText value="#{song.song3}" />
+		<br />
+		Song: <h:inputText value="#{song.song4}" />
+		<br />
+		Song: <h:inputText value="#{song.song5}" />
+		<br />
+		Song: <h:inputText value="#{song.song6}" />
+		<br />
+		Song: <h:inputText value="#{song.song7}" />
+		<br />
+		Song: <h:inputText value="#{song.song8}" />
+		<br />
+		Song: <h:inputText value="#{song.song9}" />
+		<br />
+		Song: <h:inputText value="#{song.song10}" />
+		<br />
+		Song: <h:inputText value="#{song.song11}" />
+		<br />
+		Song: <h:inputText value="#{song.song12}" />
+		<br />
+		Song: <h:inputText value="#{song.song13}" />
+		<br />
+		
+		<br></br>
+		<br></br>
+		<h:commandButton action="#{formController.onSubmit()}" value="Submit" />
+	</h:form>
+	</ui:define>
+	</ui:composition>
+
+</body>
+
+
+
+</html>

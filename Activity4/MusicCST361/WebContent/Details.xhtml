@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<style>
+	.albumTable{
+		border:1px black solid;
+	}
+	.albumTableOdd{
+		background: #EEE;
+	}
+	.albumTableHead{
+		font-weight:bold;
+	}
+</style>
+</head>
+<body>
+	<p>Hello #{user.firstname} #{user.lastname}</p>
+	<br /><br />	
+	<h:dataTable value="#{formController.service.songs}" var="o" styleClass="albumTable" headerClass="albumTableHead" rowClasses="albumTableOdd, albumTableEven">
+		<h:column>
+			<f:facet name="header">Albums</f:facet>
+			#{o.album}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Artist</f:facet>
+			#{o.artist}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 1</f:facet>
+			#{o.song1}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 2</f:facet>
+			#{o.song2}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 3</f:facet>
+			#{o.song3}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 4</f:facet>
+			#{o.song4}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 5</f:facet>
+			#{o.song5}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 6</f:facet>
+			#{o.song6}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 7</f:facet>
+			#{o.song7}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 8</f:facet>
+			#{o.song8}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 9</f:facet>
+			#{o.song9}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 10</f:facet>
+			#{o.song10}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 11</f:facet>
+			#{o.song11}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 12</f:facet>
+			#{o.song12}
+		</h:column>	
+		<h:column>
+			<f:facet name="header">Song 13</f:facet>
+			#{o.song13}
+		</h:column>	
+	</h:dataTable>
+	<br />
+	
+
+</body>
+</html>
